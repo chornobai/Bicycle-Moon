@@ -1,5 +1,6 @@
-# start
-Veronika_Chornobay -- template for new projects (webpack, gulp)
+Макет Велосипеды
+Исполнитель: Чернобай Вероника
+
 
 # How use
 install - npm i
