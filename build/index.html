@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Велосипеды</title>
+  <link rel="preload" href="fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicon/32.svg" type="image/svg+xml">
+    <!-- Pixel Glass -->
+    <!-- <style>
+      html {
+        background-repeat: no-repeat;
+        background-position: 50% 0;
+        /* Mobile layout by default */
+        background-image: url("img/Сайт.png");
+      }
+
+
+      /* Desktop */
+      @media (max-width: 1023px) {
+        html {
+          /* Desktop layout */
+          background-image: url("img/Frame\ 42.png");
+        }
+      }
+
+      @media (max-width: 767px) {
+        html {
+          /* Desktop layout */
+          background-image: url("img/Frame\ 41.png");
+        }
+      }
+
+      body{
+        opacity: 0.4;
+        filter: invert(0.8);
+      }
+    </style> -->
+    <!-- // Pixel Glass -->
+</head>
+
+<body>
+<div class="container">
+    <header class="header">
+
+      <!-- header-nav--nojs \ Класс для меню без JS -->
+      <!-- header-nav--open \ Класс открытие меню-->
+
+      <nav class="header-nav header-nav--nojs">
+        <a class="header-nav__logo">
+          <img src="img/logo/logo.svg" alt="Логотип Moon - прописан буквами" width="68" height="20"></a>
+          <ul class="header-nav__list">
+          <li class="header-nav__item"><a class="header-nav__link" href="#">О нас</a></li>
+          <li class="header-nav__item"><a class="header-nav__link" href="#">Виды велосипедов</a></li>
+          <li class="header-nav__item"><a class="header-nav__link" href="#">Видео про велосипеды</a></li>
+          <li class="header-nav__item"><a class="header-nav__link" href="#">Контакты</a></li>
+        </ul>
+        <button class="header-nav__toggle" type="button" aria-label="Кнопка переключения меню"></button>
+      </nav>
+
+    </header>
+
+    <main class="main">
+
+      <h1 class="visually-hidden">Магазин велосипедов Moon</h1>
+
+      <section class="intro">
+
+        <!-- intro-wrapper--open \ Класс для главного блока если Меню открыто -->
+
+        <div class="intro-wrapper">
+        <h2 class="intro-title">Мы продаем
+          велосипеды</h2>
+        <p class="intro-text">Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
+      </div>
+        <form class="intro-form" action="https://echo.htmlacademy.ru" method="post" autocomplete="off">
+          <p class="intro-form__text">Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
+          <ul class="intro-form__list">
+            <li class="intro-form__item">
+              <label class="visually-hidden" for="name"></label>
+              <input type="text" id="name" name="name" placeholder="Введите Ваше Имя" required>
+            </li>
+            <li class="intro-form__item">
+              <label class="visually-hidden" for="phone"></label>
+              <input type="tel" id="phone" name="phone" placeholder="Введите Ваш номер телефона" required>
+            </li>
+          </ul>
+          <button class="intro-form__button" type="submit">Подобрать велосипед мечты</button>
+        </form>
+
+      </section>
+
+      <section class="facts">
+
+        <h2 class="facts-title">Несколько фактов о нас</h2>
+
+      </section>
+      <section class="goods">
+
+        <h2 class="goods-title">Виды велосипедов</h2>
+        <ul class="goods-list">
+          <li class="goods-item">
+            <a class="goods-item__link" href="blank"><img src="" alt=""></a>
+          </li>
+          <li class="goods-item">
+            <a class="goods-item__link" href="blank"><img src="" alt=""></a>
+          </li>
+          <li class="goods-item">
+            <a class="goods-item__link" href="blank"><img src="" alt=""></a>
+          </li>
+        </ul>
+
+      </section>
+      <section class="video">
+
+        <h2 class="video-title">Видео про велосипеды</h2>
+        <p class="video-text">В этом видео мы подробно расскажем про особенности выбора велосипеда для себя. </p>
+        <video width="100%" height="522">
+          <source src="#" type="video/mp4">
+        </video>
+        <button class="video-button" type="button" aria-label="Кнопка для включения видео"></button>
+
+      </section>
+
+    </main>
+
+    <footer class="footer">
+
+      <h2 class="footer-title">Как нас найти?</h2>
+      <p class="footer-text">Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
+      <div class="location__map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3361.2061370942233!2d30.321604830065535!3d59.93902610493592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sjo!4v1620395001143!5m2!1sru!2sjo"
+          width="100%" height="530" loading="lazy" style="border: 0;" allowfullscreen></iframe>
+      </div>
+      <section class="footer-contacts">
+
+        <h2 class="visually-hidden"> контакты магазина Moon</h2>
+        <ul class="footer-contacts__list">
+          <li class="footer-contacts__item">
+            <svg width="26" height="20">
+              <use xlink:href="#"></use>
+            </svg>
+            <a class="footer-contacts__link" href="mailto:puteshestviemechta@gmail.ru"
+              aria-label="Электронная почта">puteshestviemechta@gmail.ru</a>
+          </li>
+          <li class="footer-contacts__item">
+            <svg width="26" height="20">
+              <use xlink:href="#"></use>
+            </svg>
+            <a class="footer-contacts__link" href="tel:749978468446" aria-label="Телефон магазина Moon">+7 (499)
+              -784-684-46</a>
+          </li>
+        </ul>
+
+      </section>
+
+    </footer>
+  </div>
+<script type="module" src="js/script.min.js"></script>
+</body>
+
+</html>

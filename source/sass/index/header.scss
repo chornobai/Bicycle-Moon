@@ -1,0 +1,231 @@
+.header {
+  position: relative;
+  padding: 0 calc(50% - 440px);
+  margin-bottom: 258px;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    min-height: 825px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: $black url("../img/backgrounds/bike-desktop.jpg") center no-repeat;
+    background-size: cover;
+    z-index: -1;
+
+    @media (min-resolution: 2dppx) {
+      background: $black url("../img/backgrounds/bike-desktop@2x.jpg") center no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-nav__logo {
+  position: absolute;
+  bottom: -287px;
+}
+
+.header-nav__list {
+  @include reset;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 21px 25px 9px 22px;
+  border-bottom: 1px solid $pale-white;
+}
+
+.header-nav__item {
+  @include reset;
+}
+
+.header-nav__link {
+  display: block;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: -0.005em;
+  opacity: 0.7;
+  color: $white;
+}
+
+.header-nav__toggle {
+  display: none;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background: $aqua url("../img/icons/menu-open.svg") center no-repeat;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    opacity: 1;
+  }
+
+  &:active {
+    transform: scale(0.95);
+    transition: 0.2s;
+  }
+}
+
+// header-nav--open \ Класс JS для открытия меню
+// header-nav--nojs \ Меню без JS
+
+.header-nav--nojs .header-nav__list {
+  display: flex;
+}
+
+.header-nav--nojs .header-nav__toggle {
+  display: none;
+}
+
+.header-nav--open .header-nav__toggle {
+  background: transparent url("../img/icons/menu-close.svg") center no-repeat;
+
+  &:hover {
+    background: transparent url("../img/icons/menu-close.svg") center no-repeat;
+    transform: scale(0.8);
+    transition: 0.2s;
+  }
+
+  &:focus{
+    filter: brightness(0);
+  }
+
+  &:active{
+    filter: brightness(0);
+  }
+}
+
+.header-nav--open .header-nav__list {
+  display: flex;
+}
+
+@media (max-width: $tablet-width) {
+  .header {
+    margin-bottom: 136px;
+    padding: 0;
+
+    &::after {
+      width: 100%;
+      min-height: 340px;
+      background: $black url("../img/backgrounds/bike-tablet.jpg") center no-repeat;
+      background-size: cover;
+
+      @media (min-resolution: 2dppx) {
+        background: $black url("../img/backgrounds/bike-tablet@2x.jpg") center no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+
+  .header-nav {
+    justify-content: flex-end;
+  }
+
+  .header-nav__logo {
+    top: 25px;
+    bottom: 0;
+    left: 22px;
+  }
+
+  .header-nav__list {
+    display: none;
+    position: relative;
+    width: 100%;
+    min-height: 568px;
+
+    flex-direction: column;
+    justify-content: flex-start;
+    background: $white;
+    padding: 100px 0 138px 0;
+    z-index: 2;
+  }
+
+  .header-nav__item {
+    background: $gray-top;
+    margin-bottom: 30px;
+    position: relative;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &::after {
+      position: absolute;
+      top: 18px;
+      right: 14px;
+
+      content: "";
+      width: 25px;
+      height: 25px;
+      background: url("../img/icons/arrow.svg") center no-repeat;
+      background-size: cover;
+    }
+
+    &:hover {
+      box-shadow: 1px 0 3px $aqua;
+      transition: 0.2s;
+    }
+
+    &:focus {
+      box-shadow: 1px 0 3px $aqua;
+      transition: 0.2s;
+    }
+
+    &:active {
+      box-shadow: 1px 0 3px $aqua;
+      transition: 0.2s;
+    }
+
+
+  }
+
+  .header-nav__link {
+    color: $gray-menu;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    padding: 16px 35px 17px 16px;
+  }
+
+  .header-nav__toggle {
+    display: flex;
+    z-index: 5;
+    position: absolute;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .header {
+    margin-bottom: 120px;
+
+    &::after {
+      width: 100%;
+      min-height: 390px;
+      background: $black url("../img/backgrounds/bike-mobile.jpg") center no-repeat;
+      background-size: cover;
+
+      @media (min-resolution: 2dppx) {
+        background: $black url("../img/backgrounds/bike-mobile@2x.jpg") center no-repeat;
+        background-size: cover;
+      }
+    }
+  }
+
+  .header-nav {
+    justify-content: flex-end;
+  }
+
+  .header-nav__logo {
+    left: 18px;
+  }
+}

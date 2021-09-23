@@ -1,0 +1,174 @@
+.intro {
+  padding: 0 calc(50% - 450px);
+  margin: 0 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.intro-wrapper {
+  max-width: 393px;
+  box-sizing: border-box;
+  padding: 48px 0px 0 0;
+}
+
+.intro-title {
+  @include reset-block;
+
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 64px;
+
+  margin-bottom: 24px;
+}
+
+.intro-text {
+  @include reset-block;
+
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 32px;
+
+  opacity: 0.7;
+}
+
+.intro-form {
+  max-width: 326px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.intro-form__text {
+  @include reset-block;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 28px;
+  text-align: center;
+  margin-bottom: 21px;
+}
+
+.intro-form__list {
+  @include reset;
+  text-align: center;
+  margin-bottom: 19px;
+}
+
+.intro-form__item {
+  margin-bottom: 20px;
+}
+
+.intro-form__item input {
+  width: 100%;
+
+  border: 1px solid $gray-border;
+  border-radius: 6px;
+  padding: 12px 0 10px 30px;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+
+  &::placeholder {
+    color: $gray-transparent;
+  }
+}
+
+.intro-form__button {
+  width: 100%;
+  padding: 17px 0 13px 0;
+  background: $aqua;
+  color: $black;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 21px;
+  border-radius: 6px;
+  border: none;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    transform: scale(0.95);
+    transition: 0.2s;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .intro {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    padding: 0 calc(50% - 340px);
+  }
+
+  // intro-wrapper--open \ Класс для главного блока -  когда открыто Меню.
+
+  .intro-wrapper {
+    max-width: 435px;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 150px;
+
+    &--open {
+      color: $black;
+      margin-top: -100px;
+    }
+  }
+
+  .intro-title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 42px;
+    margin-bottom: 19px;
+  }
+
+  .intro-text {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  .intro-form {
+    max-width: 321px;
+  }
+
+  .intro-form__text {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    color: $black;
+    margin-bottom: 29px;
+  }
+
+  .intro-form__item input {
+    padding: 12px 0 10px 20px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .intro-wrapper {
+    max-width: 310px;
+    margin-bottom: 142px;
+  }
+
+  .intro-form {
+    padding: 0 17px;
+  }
+
+  .intro-form__text {
+    margin-bottom: 19px;
+  }
+
+  .intro-form__item input {
+    padding: 12px 0 10px 25px;
+  }
+
+  .intro-form__button {
+    padding: 14px 0 14px 0;
+  }
+}
