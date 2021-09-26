@@ -1,5 +1,9 @@
-# start
-Veronika_Chornobay -- template for new projects (webpack, gulp)
+Макет Велосипеды
+Менеджер:	Мария Смолицкая		
+Тестировщик:	Евгения Рябикова / Матвей Рябиков 		
+Наставник:	Михаил Кислов		
+Исполнитель:	Вероника Чернобай		
+
 
 # How use
 install - npm i
