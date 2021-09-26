@@ -131,10 +131,6 @@ const scripts = () => {
       console.error('WEBPACK ERROR', err);
       this.emit('end'); // Don't stop the rest of the task
     })
-    .pipe(sourcemap.init())
-    .pipe(terser().on("error", notify.onError()))
-    .pipe(rename("script.min.js"))
-    .pipe(sourcemap.write("."))
     .pipe(gulp.dest("build/js"))
     .pipe(sync.stream());
 
@@ -159,7 +155,7 @@ const sprite = () => {
     .pipe(svgstore({
       inlineSvg: true
     }))
-    .pipe(rename("sprite2.svg"))
+    .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("build"));
 }
 

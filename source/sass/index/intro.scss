@@ -1,7 +1,8 @@
 .intro {
   padding: 0 calc(50% - 450px);
-  margin: 0 10px;
+  margin: 0 10px 390px 10px;
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
 }
@@ -9,7 +10,7 @@
 .intro-wrapper {
   max-width: 393px;
   box-sizing: border-box;
-  padding: 48px 0px 0 0;
+  padding: 48px 0 0 0;
 }
 
 .intro-title {
@@ -28,8 +29,6 @@
   font-weight: 300;
   font-size: 20px;
   line-height: 32px;
-
-  opacity: 0.7;
 }
 
 .intro-form {
@@ -58,6 +57,7 @@
 }
 
 .intro-form__item input {
+  box-sizing: border-box;
   width: 100%;
 
   border: 1px solid $gray-border;
@@ -66,9 +66,19 @@
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
+  outline: none;
+
 
   &::placeholder {
     color: $gray-transparent;
+  }
+
+  &:hover {
+    box-shadow: 0 0 0 2px $aqua;
+  }
+
+  &:focus {
+    box-shadow: 0 0 9px 0 $aqua;
   }
 }
 
@@ -82,6 +92,7 @@
   line-height: 21px;
   border-radius: 6px;
   border: none;
+  cursor: pointer;
 
   &:hover {
     opacity: 0.8;
@@ -102,7 +113,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin: 0;
+    margin: 0 0 71px 0;
     padding: 0 calc(50% - 340px);
   }
 

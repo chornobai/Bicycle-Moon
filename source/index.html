@@ -4,47 +4,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bicycle Shop Moon, introduce wide range bicycle models">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Велосипеды</title>
   <link rel="preload" href="fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/OpenSans-Light.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/OpenSans-Semibold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicon/32.svg" type="image/svg+xml">
-    <!-- Pixel Glass -->
-    <!-- <style>
+  <!-- Pixel Glass -->
+  <!-- <style>
+    html {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      /* Mobile layout by default */
+      background-image: url("img/Сайт.png");
+    }
+
+
+    /* Desktop */
+    @media (max-width: 1023px) {
       html {
-        background-repeat: no-repeat;
-        background-position: 50% 0;
-        /* Mobile layout by default */
-        background-image: url("img/Сайт.png");
+        /* Desktop layout */
+        background-image: url("img/Frame\ 42.png");
       }
+    }
 
-
-      /* Desktop */
-      @media (max-width: 1023px) {
-        html {
-          /* Desktop layout */
-          background-image: url("img/Frame\ 42.png");
-        }
+    @media (max-width: 767px) {
+      html {
+        /* Desktop layout */
+        background-image: url("img/Frame\ 41.png");
       }
+    }
 
-      @media (max-width: 767px) {
-        html {
-          /* Desktop layout */
-          background-image: url("img/Frame\ 41.png");
-        }
-      }
-
-      body{
-        opacity: 0.4;
-        filter: invert(0.8);
-      }
-    </style> -->
-    <!-- // Pixel Glass -->
+    body {
+      opacity: 0.8;
+      filter: invert(0.8);
+    }
+  </style> -->
+  <!-- // Pixel Glass -->
 </head>
 
 <body>
-<div class="container">
+  <div class="container">
     <header class="header">
 
       <!-- header-nav--nojs \ Класс для меню без JS -->
@@ -53,11 +57,12 @@
       <nav class="header-nav header-nav--nojs">
         <a class="header-nav__logo">
           <img src="img/logo/logo.svg" alt="Логотип Moon - прописан буквами" width="68" height="20"></a>
-          <ul class="header-nav__list">
-          <li class="header-nav__item"><a class="header-nav__link" href="#">О нас</a></li>
-          <li class="header-nav__item"><a class="header-nav__link" href="#">Виды велосипедов</a></li>
-          <li class="header-nav__item"><a class="header-nav__link" href="#">Видео про велосипеды</a></li>
-          <li class="header-nav__item"><a class="header-nav__link" href="#">Контакты</a></li>
+        <ul class="header-nav__list">
+
+          <li class="header-nav__item"><a class="header-nav__link" href="#about">О нас</a></li>
+          <li class="header-nav__item"><a class="header-nav__link" href="#goods">Виды велосипедов</a></li>
+          <li class="header-nav__item"><a class="header-nav__link" href="#video">Видео про велосипеды</a></li>
+          <li class="header-nav__item"><a class="header-nav__link" href="#contacts">Контакты</a></li>
         </ul>
         <button class="header-nav__toggle" type="button" aria-label="Кнопка переключения меню"></button>
       </nav>
@@ -72,21 +77,23 @@
 
         <!-- intro-wrapper--open \ Класс для главного блока если Меню открыто -->
 
-        <div class="intro-wrapper">
-        <h2 class="intro-title">Мы продаем
-          велосипеды</h2>
-        <p class="intro-text">Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
-      </div>
+        <div class="intro-wrapper intro-wrapper--open">
+          <h2 class="intro-title">Мы продаем
+            велосипеды</h2>
+          <p class="intro-text">Наш магазин отбирает только самые лучшие велосипеды для продажи</p>
+        </div>
         <form class="intro-form" action="https://echo.htmlacademy.ru" method="post" autocomplete="off">
-          <p class="intro-form__text">Заполните поля ниже и мы подберем велосипед Вашей мечты</p>
+          <p class="intro-form__text">Заполните поля ниже и мы подберем велосипед Вашей мечты </p>
           <ul class="intro-form__list">
             <li class="intro-form__item">
               <label class="visually-hidden" for="name"></label>
-              <input type="text" id="name" name="name" placeholder="Введите Ваше Имя" required>
+              <input type="text" id="name" name="name" placeholder="Введите Ваше Имя" pattern="[a-zA-Zа-яА-ЯёЁ ]+"
+                required>
             </li>
             <li class="intro-form__item">
               <label class="visually-hidden" for="phone"></label>
-              <input type="tel" id="phone" name="phone" placeholder="Введите Ваш номер телефона" required>
+              <input type="tel" id="phone" name="phone" placeholder="Введите Ваш номер телефона" required
+                onchange="numersport(this)">
             </li>
           </ul>
           <button class="intro-form__button" type="submit">Подобрать велосипед мечты</button>
@@ -94,66 +101,139 @@
 
       </section>
 
-      <section class="facts">
+      <section class="facts" id="about">
 
         <h2 class="facts-title">Несколько фактов о нас</h2>
-
-      </section>
-      <section class="goods">
-
-        <h2 class="goods-title">Виды велосипедов</h2>
-        <ul class="goods-list">
-          <li class="goods-item">
-            <a class="goods-item__link" href="blank"><img src="" alt=""></a>
+        <ul class="facts-list">
+          <li class="facts-item">
+            <p class="facts-item__text"> Самый широкий выбор велосипедов!</p>
           </li>
-          <li class="goods-item">
-            <a class="goods-item__link" href="blank"><img src="" alt=""></a>
+          <li class="facts-item">
+            <p class="facts-item__text">Доставка велосипедов по всей России!</p>
           </li>
-          <li class="goods-item">
-            <a class="goods-item__link" href="blank"><img src="" alt=""></a>
+          <li class="facts-item">
+            <p class="facts-item__text">Большой выбор крутых аксессуаров!</p>
+          </li>
+          <li class="facts-item">
+            <p class="facts-item__text">Профессиональные консультации!</p>
           </li>
         </ul>
 
       </section>
-      <section class="video">
+      <section class="goods" id="goods">
+
+        <h2 class="goods-title">Виды велосипедов</h2>
+        <ul class="goods-list">
+          <li class="goods-item goods-item--first">
+            <h3 class="goods-item__title">Дорожный велосипед</h3>
+            <a class="goods-item__link" href="#" target="blank">
+              <picture>
+                <source type="image/webp" media="(max-width: 1024px)"
+                  srcset="img/content/tablet-1.webp 1x, img/content/tablet-1@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 768px)"
+                  srcset="img/content/mobile-1.webp 1x, img/content/mobile-1@2x.webp 2x">
+                <source type="image/webp" srcset="img/content/desktop-1.webp 1x, img/content/desktop-1@2x.webp 2x">
+
+
+                <!-- 1х: 270px; 2x: 540px -->
+                <source media="(max-width: 1024px)"
+                  srcset="img/content/tablet-1.jpg 1x, img/content/tablet-1@2x.jpg 2x">
+                <source media="(max-width: 768px)" srcset="img/content/mobile-1.jpg 1x, img/content/mobile-1@2x.jpg 2x">
+                <!-- 1х: 324px; 2x: 684px -->
+                <img class="goods__picture" loading="lazy" src="img/content/desktop-1.jpg"
+                  srcset="img/content/desktop-1@2x.jpg 2x" alt="Городской велосипед" width="342" height="503">
+              </picture>
+
+            </a>
+          </li>
+          <li class="goods-item goods-item--second">
+            <h3 class="goods-item__title">Горный велосипед</h3>
+            <a class="goods-item__link" href="#" target="blank">
+              <picture>
+                <source type="image/webp" media="(max-width: 1024px)"
+                  srcset="img/content/tablet-2.webp 1x, img/content/tablet-2@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 768px)"
+                  srcset="img/content/mobile-2.webp 1x, img/content/mobile-2@2x.webp 2x">
+                <source type="image/webp" srcset="img/content/desktop-2.webp 1x, img/content/desktop-2@2x.webp 2x">
+
+                <!-- 1х: 270px; 2x: 540px -->
+                <source media="(max-width: 1024px)"
+                  srcset="img/content/tablet-2.jpg 1x, img/content/tablet-2@2x.jpg 2x">
+                <source media="(max-width: 768px)" srcset="img/content/mobile-2.jpg 1x, img/content/mobile-2@2x.jpg 2x">
+                <!-- 1х: 324px; 2x: 684px -->
+                <img class="goods__picture" loading="lazy" src="img/content/desktop-2.jpg"
+                  srcset="img/content/desktop-2@2x.jpg 2x" alt="Горный велосипед" width="342" height="566">
+              </picture>
+
+            </a>
+          </li>
+          <li class="goods-item goods-item--third">
+            <h3 class="goods-item__title">Детский велосипед</h3>
+            <a class="goods-item__link" href="#" target="blank">
+              <picture>
+                <source type="image/webp" media="(max-width: 1024px)"
+                  srcset="img/content/tablet-3.webp 1x, img/content/tablet-3@2x.webp 2x">
+                <source type="image/webp" media="(max-width: 768px)"
+                  srcset="img/content/mobile-3.webp 1x, img/content/mobile-3@2x.webp 2x">
+                <source type="image/webp" srcset="img/content/desktop-3.webp 1x, img/content/desktop-3@2x.webp 2x">
+
+                <!-- 1х: 270px; 2x: 540px -->
+                <source media="(max-width: 1024px)"
+                  srcset="img/content/tablet-3.jpg 1x, img/content/tablet-3@2x.jpg 2x">
+                <source media="(max-width: 768px)" srcset="img/content/mobile-3.jpg 1x, img/content/mobile-3@2x.jpg 2x">
+                <!-- 1х: 324px; 2x: 684px -->
+                <img class="goods__picture" loading="lazy" src="img/content/desktop-3.jpg"
+                  srcset="img/content/desktop-3@2x.jpg 2x" alt="Детский велосипед" width="342" height="503">
+              </picture>
+
+            </a>
+          </li>
+        </ul>
+
+      </section>
+      <section class="video" id="video">
 
         <h2 class="video-title">Видео про велосипеды</h2>
         <p class="video-text">В этом видео мы подробно расскажем про особенности выбора велосипеда для себя. </p>
-        <video width="100%" height="522">
-          <source src="#" type="video/mp4">
-        </video>
-        <button class="video-button" type="button" aria-label="Кнопка для включения видео"></button>
+        <div class="video-item">
+          <video width="929" height="522">
+            <source src="#" type="video/mp4">
+          </video>
+          <button class="video-item__button" type="button" aria-label="Кнопка для включения видео"></button>
+        </div>
+
 
       </section>
 
     </main>
 
-    <footer class="footer">
+    <footer class="footer" id="contacts">
 
       <h2 class="footer-title">Как нас найти?</h2>
       <p class="footer-text">Мы находимся по адресу: Санкт-Петербург, ул. Большая Конюшенная, д. 19</p>
-      <div class="location__map">
+      <div class="footer-location">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3361.2061370942233!2d30.321604830065535!3d59.93902610493592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sjo!4v1620395001143!5m2!1sru!2sjo"
-          width="100%" height="530" loading="lazy" style="border: 0;" allowfullscreen></iframe>
+          width="957" height="530" loading="lazy" style="border: 0;" allowfullscreen></iframe>
       </div>
       <section class="footer-contacts">
 
         <h2 class="visually-hidden"> контакты магазина Moon</h2>
         <ul class="footer-contacts__list">
           <li class="footer-contacts__item">
-            <svg width="26" height="20">
-              <use xlink:href="#"></use>
-            </svg>
-            <a class="footer-contacts__link" href="mailto:puteshestviemechta@gmail.ru"
-              aria-label="Электронная почта">puteshestviemechta@gmail.ru</a>
+
+            <a class="footer-contacts__link" href="mailto:puteshestviemechta@gmail.ru" aria-label="Электронная почта">
+              <svg width="26" height="20">
+                <use xlink:href="../img/sprite/sprite.svg#mail"></use>
+              </svg>puteshestviemechta@gmail.ru</a>
           </li>
           <li class="footer-contacts__item">
-            <svg width="26" height="20">
-              <use xlink:href="#"></use>
-            </svg>
-            <a class="footer-contacts__link" href="tel:749978468446" aria-label="Телефон магазина Moon">+7 (499)
-              -784-684-46</a>
+
+            <a class="footer-contacts__link" href="tel:749978468446" aria-label="Телефон магазина Moon"><svg width="22"
+                height="24">
+                <use xlink:href="../img/sprite/sprite.svg#phone"></use>
+              </svg>
+              +7 (499)-784-684-46</a>
           </li>
         </ul>
 
@@ -161,7 +241,8 @@
 
     </footer>
   </div>
-<script type="module" src="js/script.min.js"></script>
+  <script type="module" src="js/script.js"></script>
+
 </body>
 
 </html>

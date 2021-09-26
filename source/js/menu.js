@@ -3,6 +3,7 @@ const buttonMenu = document.querySelector ('.header-nav__toggle');
 const introBlock = document.querySelector ('.intro-wrapper');
 
 menu.classList.remove('header-nav--nojs');
+introBlock.classList.remove('intro-wrapper--open');
 
 buttonMenu.addEventListener('click', function(evt){
   evt.preventDefault();
