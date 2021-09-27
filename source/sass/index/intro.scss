@@ -10,10 +10,10 @@
 .intro-wrapper {
   max-width: 393px;
   box-sizing: border-box;
-  padding: 48px 0 0 0;
+  padding: 47px 0 0 0;
 }
 
-.intro-title {
+.intro-wrapper h2 {
   @include reset-block;
 
   font-weight: 700;
@@ -23,7 +23,7 @@
   margin-bottom: 24px;
 }
 
-.intro-text {
+.intro-wrapper p {
   @include reset-block;
 
   font-weight: 300;
@@ -37,7 +37,7 @@
   text-align: center;
 }
 
-.intro-form__text {
+.intro-form p {
   @include reset-block;
   font-weight: 600;
   font-size: 17px;
@@ -66,6 +66,7 @@
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
+  letter-spacing: 0.5px;
   outline: none;
 
 
@@ -82,7 +83,7 @@
   }
 }
 
-.intro-form__button {
+.intro-form button {
   width: 100%;
   padding: 17px 0 13px 0;
   background: $aqua;
@@ -131,14 +132,14 @@
     }
   }
 
-  .intro-title {
+  .intro-wrapper h2 {
     font-weight: 700;
     font-size: 30px;
     line-height: 42px;
     margin-bottom: 19px;
   }
 
-  .intro-text {
+  .intro-wrapper p {
     font-weight: 300;
     font-size: 18px;
     line-height: 32px;
@@ -148,7 +149,7 @@
     max-width: 321px;
   }
 
-  .intro-form__text {
+  .intro-form p {
     font-weight: 600;
     font-size: 18px;
     line-height: 28px;
@@ -171,7 +172,7 @@
     padding: 0 17px;
   }
 
-  .intro-form__text {
+  .intro-form p {
     margin-bottom: 19px;
   }
 
@@ -179,7 +180,7 @@
     padding: 12px 0 10px 25px;
   }
 
-  .intro-form__button {
+  .intro-form button {
     padding: 14px 0 14px 0;
   }
 }

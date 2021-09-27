@@ -52,8 +52,9 @@ a {
   height: 100%;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
-main{
+main {
   flex-grow: 1;
 }

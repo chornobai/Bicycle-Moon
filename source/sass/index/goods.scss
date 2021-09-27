@@ -5,7 +5,7 @@
   text-align: center;
 }
 
-.goods-title {
+.goods h2 {
   @include reset-block;
   font-weight: 600;
   font-size: 30px;
@@ -30,8 +30,8 @@
   position: relative;
   z-index: 2;
 
-  &:hover{
-    transform:scale(0.9);
+  &:hover {
+    transform: scale(0.9);
     transition: 0.2s;
   }
 
@@ -92,7 +92,7 @@
   }
 }
 
-.goods-item__title {
+.goods-list h3 {
   @include reset-block;
   order: 2;
   font-weight: 600;
@@ -106,7 +106,7 @@
   margin-bottom: 20px;
 }
 
-.goods__picture {
+.goods-item img {
   border-radius: 8px;
   max-width: 342px;
 }
@@ -120,7 +120,7 @@
     row-gap: 30px;
   }
 
-  .goods-title {
+  .goods h2 {
     font-size: 24px;
     line-height: 41px;
     margin-bottom: 30px;
@@ -141,7 +141,7 @@
     &--second {
       margin-top: 0;
 
-      .goods__picture {
+      .goods-item img {
         object-position: 50% 43%;
       }
 
@@ -155,7 +155,7 @@
     }
 
     &--third {
-      .goods__picture {
+      img {
         object-fit: cover;
         object-position: 50% 86%;
       }
@@ -175,7 +175,7 @@
     height: 300px;
   }
 
-  .goods__picture {
+  .goods-item img {
     max-width: 270px;
     height: 300px;
     object-fit: cover;
@@ -184,7 +184,7 @@
 
 @media (max-width: $mobile-width) {
   .goods {
-    padding: 50px calc(50% - 293px) 34px calc(50% - 293px);
+    padding: 49px calc(50% - 293px) 34px calc(50% - 293px);
   }
 
   .goods-list {

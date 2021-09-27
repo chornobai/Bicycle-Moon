@@ -4,7 +4,7 @@
   text-align: center;
 }
 
-.footer-title {
+.footer h2 {
   @include reset-block;
   margin-bottom: 30px;
   font-weight: 600;
@@ -13,7 +13,7 @@
   color: $gray-dark;
 }
 
-.footer-text {
+.footer p {
   @include reset-block;
   margin-bottom: 42px;
   font-weight: 400;
@@ -91,12 +91,12 @@ iframe {
     padding: 0 calc(50% - 349px) 98px calc(50% - 349px);
   }
 
-  .footer-title {
+  .footer h2 {
     font-size: 24px;
     margin-bottom: 20px;
   }
 
-  .footer-text {
+  .footer p {
     padding: 0;
     margin-bottom: 20px;
   }
@@ -127,12 +127,12 @@ iframe {
     padding: 0 0 98px 0;
   }
 
-  .footer-title {
+  .footer h2 {
     font-size: 18px;
-    margin-bottom: 22px;
+    margin-bottom: 19px;
   }
 
-  .footer-text {
+  .footer p {
     padding: 0 calc(50vw - 132px);
   }
 
@@ -157,6 +157,10 @@ iframe {
   }
 
   .footer-contacts__item {
-    margin-bottom: 13px;
+    margin-bottom: 15px;
+  }
+
+  .footer-contacts__link {
+    column-gap: 20px;
   }
 }

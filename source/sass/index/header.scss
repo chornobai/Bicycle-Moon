@@ -48,10 +48,10 @@
 .header-nav__item {
   @include reset;
   margin-right: 135px;
-  &:last-child{
+
+  &:last-child {
     margin-right: 0;
   }
-
 }
 
 .header-nav__link {
@@ -138,6 +138,7 @@
     margin-bottom: 136px;
     padding: 0;
 
+
     &::after {
       width: 100%;
       min-height: 340px;
@@ -164,7 +165,7 @@
   .header-nav__list {
     display: none;
     position: relative;
-    width: 100%;
+    min-width: 100%;
     min-height: 568px;
 
     flex-direction: column;
@@ -178,7 +179,7 @@
     background: $gray-top;
     margin-bottom: 30px;
     position: relative;
-    margin-right:0;
+    margin-right: 0;
 
     &:last-child {
       margin-bottom: 0;
