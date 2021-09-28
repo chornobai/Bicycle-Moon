@@ -1,5 +1,5 @@
 .footer {
-  padding: 0 calc(50% - 481px);
+  padding: 0 calc(50% - 478px);
   padding-bottom: 98px;
   text-align: center;
 }
@@ -133,7 +133,7 @@ iframe {
   }
 
   .footer p {
-    padding: 0 calc(50vw - 132px);
+    padding: 0 calc(50% - 132px);
   }
 
   .footer-location {
@@ -158,9 +158,16 @@ iframe {
 
   .footer-contacts__item {
     margin-bottom: 15px;
+
+    &:last-child {
+      .footer-contacts__link {
+        column-gap: 14px;
+        margin-left: -11px;
+      }
+    }
   }
 
   .footer-contacts__link {
-    column-gap: 20px;
+    column-gap: 12px;
   }
 }
