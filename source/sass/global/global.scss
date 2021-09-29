@@ -24,6 +24,11 @@ body {
   background: $white;
   overflow-x: hidden;
 }
+// Класс для отключения скролла
+
+.body--overflow {
+  overflow: hidden;
+}
 
 .visually-hidden {
   position: absolute;

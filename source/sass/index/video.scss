@@ -1,8 +1,8 @@
 .video {
   padding: 121px calc(50% - 465px) 0 calc(50% - 465px);
-  background: linear-gradient(-180deg, $dark 86.7%, rgba(255, 255, 255, 1) 60%);
+  background: linear-gradient(-180deg, $dark 87.7%, rgba(255, 255, 255, 1) 60%);
   text-align: center;
-  margin-bottom: 140px;
+  margin-bottom: 150px;
 }
 
 .video h2 {
@@ -19,7 +19,7 @@
   font-weight: 300;
   font-size: 16px;
   line-height: 28px;
-  margin-bottom: 66px;
+  margin-bottom: 56px;
   opacity: 0.7;
 }
 
@@ -42,7 +42,7 @@ video {
 
 .video-item__button {
   position: absolute;
-  top: 41.7%;
+  top: 43.7%;
   left: 46.5%;
 
   width: 65px;

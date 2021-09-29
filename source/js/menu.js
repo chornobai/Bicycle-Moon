@@ -1,12 +1,31 @@
 const menu = document.querySelector ('.header-nav');
-const buttonMenu = document.querySelector ('.header-nav__toggle');
+const menuButton = document.querySelector ('.header-nav__toggle');
 const introBlock = document.querySelector ('.intro-wrapper');
+const menuLinks  = document.querySelectorAll('.header-nav__link');
+const body = document.querySelector('body');
+
 
 menu.classList.remove('header-nav--nojs');
 introBlock.classList.remove('intro-wrapper--open');
 
-buttonMenu.addEventListener('click', (evt)=> {
+menuButton.addEventListener('click', (evt)=> {
   evt.preventDefault();
   menu.classList.toggle('header-nav--open');
   introBlock.classList.toggle('intro-wrapper--open');
+  body.classList.toggle('body--overflow');
 });
+
+menuLinks.forEach((item) => {
+  item.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    menu.classList.remove('header-nav--open');
+    introBlock.classList.toggle('intro-wrapper--open');
+    const blockId = item.getAttribute('href');
+    document.querySelector(`${  blockId}`).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+    body.classList.toggle('body--overflow');
+  });
+});
+

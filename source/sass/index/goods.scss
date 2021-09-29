@@ -1,6 +1,5 @@
 .goods {
-  padding: 150px calc(50% - 563px) 129px calc(50% - 563px);
-
+  padding: 151px calc(50% - 633px) 149px calc(50% - 633px);
   background: #f6f7f9;
   text-align: center;
 }
@@ -11,38 +10,52 @@
   font-size: 30px;
   line-height: 30px;
   color: $black;
-  margin-bottom: 50px;
+  margin-bottom: 49px;
 }
 
 .goods-list {
   @include reset;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  column-gap: 50px;
+  padding: 0 70px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-column-gap: 50px;
 }
 
-.goods-item {
+.goods-item__link {
   display: flex;
+
   flex-direction: column;
-  margin-bottom: 20px;
-  position: relative;
-  z-index: 2;
+  row-gap: 20px;
+  cursor: pointer;
 
   &:hover {
     transform: scale(0.9);
     transition: 0.2s;
   }
 
+  &:focus {
+    transform: scale(0.9);
+    transition: 0.2s;
+  }
+
+  &:active {
+    transform: scale(1);
+    transition: 0.2s;
+  }
+}
+
+.goods-item__image {
+  position: relative;
+  z-index: 2;
+
   &--first {
-    margin-top: 10px;
+    margin: 10px 0 0 0;
 
     &::before {
       position: absolute;
       content: "";
-      left: -60px;
-      top: 158px;
+      left: -17%;
+      top: 31%;
       width: 180px;
       height: 180px;
       background: transparent url("../img/icons/ellipse.svg") no-repeat;
@@ -57,8 +70,8 @@
     &::before {
       position: absolute;
       content: "";
-      right: -23px;
-      bottom: 31px;
+      right: -7%;
+      bottom: -4%;
       width: 47px;
       height: 47px;
       background: transparent url("../img/icons/rectangle.svg") no-repeat;
@@ -69,8 +82,8 @@
     &::after {
       position: absolute;
       content: "";
-      left: -19px;
-      top: -18px;
+      left: -5.9%;
+      top: -3%;
       width: 47px;
       height: 47px;
       background: transparent url("../img/icons/rectangle.svg") no-repeat;
@@ -79,16 +92,18 @@
     }
   }
 
-  &--third::before {
-    position: absolute;
-    content: "";
-    right: -36px;
-    top: -32px;
-    width: 95px;
-    height: 95px;
-    background: transparent url("../img/icons/ellipse.svg") no-repeat;
-    background-size: cover;
-    z-index: 5;
+  &--third {
+    &::before {
+      position: absolute;
+      content: "";
+      right: -11%;
+      top: -6%;
+      width: 95px;
+      height: 95px;
+      background: transparent url("../img/icons/ellipse.svg") no-repeat;
+      background-size: cover;
+      z-index: 2;
+    }
   }
 }
 
@@ -98,26 +113,29 @@
   font-weight: 600;
   font-size: 22px;
   line-height: 34px;
+  letter-spacing: -0.5px;
   color: $black;
 }
 
-.goods-item__link {
-  display: block;
-  margin-bottom: 20px;
-}
-
 .goods-item img {
+  width: 100%;
   border-radius: 8px;
-  max-width: 342px;
+  object-fit: cover;
 }
 
 @media (max-width: $tablet-width) {
   .goods {
     padding: 48px calc(50% - 400px) 50px calc(50% - 400px);
+    margin-bottom: 72px;
   }
 
   .goods-list {
-    row-gap: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    row-gap: 105px;
   }
 
   .goods h2 {
@@ -126,7 +144,12 @@
     margin-bottom: 30px;
   }
 
-  .goods-item {
+  .goods-item__link {
+    max-width: 270px;
+    height: 300px;
+  }
+
+  .goods-item__image {
     &--first {
       margin-top: 0;
 
@@ -141,10 +164,6 @@
     &--second {
       margin-top: 0;
 
-      .goods-item img {
-        object-position: 50% 43%;
-      }
-
       &::after {
         display: none;
       }
@@ -152,10 +171,14 @@
       &::before {
         display: none;
       }
+
+      img {
+        object-position: 50% 43%;
+      }
     }
 
     &--third {
-      img {
+      .img {
         object-fit: cover;
         object-position: 50% 86%;
       }
@@ -169,13 +192,7 @@
     }
   }
 
-  .goods-item__link {
-    display: block;
-    max-width: 270px;
-    height: 300px;
-  }
-
-  .goods-item img {
+  .goods-item__image img {
     max-width: 270px;
     height: 300px;
     object-fit: cover;
@@ -184,14 +201,15 @@
 
 @media (max-width: $mobile-width) {
   .goods {
-    padding: 49px calc(50% - 293px) 34px calc(50% - 293px);
+    padding: 49px 0 37px 0;
   }
 
   .goods-list {
-    row-gap: 22px;
+    row-gap: 95px;
+    padding: 0;
   }
 
-  .goods-item {
+  .goods-item__image {
     &--first {
       &::before {
         top: 201px;

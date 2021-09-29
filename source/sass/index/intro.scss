@@ -1,6 +1,5 @@
 .intro {
-  padding: 0 calc(50% - 450px);
-  margin: 0 10px 390px 10px;
+  padding: 259px calc(50% - 450px) 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -49,26 +48,24 @@
 .intro-form__list {
   @include reset;
   text-align: center;
-  margin-bottom: 19px;
+  margin-bottom: 20px;
 }
 
 .intro-form__item {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .intro-form__item input {
   box-sizing: border-box;
   width: 100%;
-
   border: 1px solid $gray-border;
   border-radius: 6px;
-  padding: 12px 0 10px 30px;
+  padding: 13px 0 10px 28px;
   font-weight: 400;
   font-size: 15px;
   line-height: 24px;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.02em;
   outline: none;
-
 
   &::placeholder {
     color: $gray-transparent;
@@ -84,13 +81,14 @@
 }
 
 .intro-form button {
-  width: 100%;
-  padding: 17px 0 13px 0;
+  padding: 15px 53px 13px 52px;
+
   background: $aqua;
   color: $black;
   font-weight: 600;
   font-size: 15px;
   line-height: 21px;
+
   border-radius: 6px;
   border: none;
   cursor: pointer;
@@ -115,7 +113,7 @@
     align-items: center;
     text-align: center;
     margin: 0 0 71px 0;
-    padding: 0 calc(50% - 340px);
+    padding: 136px calc(50% - 340px) 0 calc(50% - 340px);
   }
 
   // intro-wrapper--open \ Класс для главного блока -  когда открыто Меню.
@@ -160,9 +158,21 @@
   .intro-form__item input {
     padding: 12px 0 10px 20px;
   }
+
+  .intro-form__list{
+    margin-bottom: 21px;
+  }
+
+  .intro-form button {
+    padding: 18px 50px 13px 52px;
+  }
 }
 
 @media (max-width: $mobile-width) {
+  .intro{
+    padding: 120px calc(50% - 340px) 0 calc(50% - 340px);
+  }
+
   .intro-wrapper {
     max-width: 288px;
     margin-bottom: 142px;
@@ -170,6 +180,10 @@
 
   .intro-form {
     padding: 0 17px;
+  }
+
+  .intro-form form{
+    min-width: 288px;
   }
 
   .intro-form p {
@@ -181,6 +195,7 @@
   }
 
   .intro-form button {
-    padding: 14px 0 14px 0;
+    width: 100%;
+    padding: 15px 0 14px 0;
   }
 }

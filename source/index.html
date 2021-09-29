@@ -14,7 +14,40 @@
   <link rel="stylesheet" href="css/style.min.css">
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="img/favicon/32.svg" type="image/svg+xml">
+  <!-- Pixel Glass -->
+  <!-- <style>
+    html {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      /* Mobile layout by default */
+      background-image: url("img/Сайт.png");
+    }
+
+
+    /* Desktop */
+    @media (max-width: 1023px) {
+      html {
+        /* Desktop layout */
+        background-image: url("img/Frame\ 42.png");
+      }
+    }
+
+    @media (max-width: 767px) {
+      html {
+        /* Desktop layout */
+        background-image: url("img/Frame\ 41.png");
+      }
+    }
+
+    body {
+      opacity: 0.6;
+      filter: invert(0.6);
+    }
+  </style> -->
+  <!-- // Pixel Glass -->
 </head>
+
+<!-- body--overflow \ Класс для переключения скролла -->
 
 <body>
   <div class="container">
@@ -28,22 +61,17 @@
           <img src="img/logo/logo.svg" alt="Логотип Moon - прописан буквами" width="68" height="20"></a>
         <ul class="header-nav__list">
 
-          <li class="header-nav__item"><a class="header-nav__link" href="#about" tabindex="0">О нас</a></li>
-          <li class="header-nav__item"><a class="header-nav__link" href="#goods" tabindex="0">Виды велосипедов</a></li>
-          <li class="header-nav__item"><a class="header-nav__link" href="#video" tabindex="0">Видео про велосипеды</a>
+          <li class="header-nav__item"><a class="header-nav__link" href="#about">О нас</a></li>
+          <li class="header-nav__item"><a class="header-nav__link" href="#goods">Виды велосипедов</a></li>
+          <li class="header-nav__item"><a class="header-nav__link" href="#video">Видео про велосипеды</a>
           </li>
-          <li class="header-nav__item"><a class="header-nav__link" href="#contacts" tabindex="0">Контакты</a></li>
+          <li class="header-nav__item"><a class="header-nav__link" href="#contacts">Контакты</a></li>
         </ul>
         <button class="header-nav__toggle" type="button" aria-label="Кнопка переключения меню"></button>
       </nav>
 
-    </header>
 
-    <main class="main">
-
-      <h1 class="visually-hidden">Магазин велосипедов Moon</h1>
-
-      <section class="intro">
+      <section class="header-intro intro">
 
         <!-- intro-wrapper--open \ Класс для главного блока если Меню открыто -->
 
@@ -70,6 +98,11 @@
           </form>
         </div>
       </section>
+    </header>
+
+    <main class="main">
+
+      <h1 class="visually-hidden">Магазин велосипедов Moon</h1>
 
       <section class="facts" id="about">
 
@@ -94,68 +127,76 @@
 
         <h2 class="goods-title">Виды велосипедов</h2>
         <ul class="goods-list">
-          <li class="goods-item goods-item--first">
-            <h3>Дорожный велосипед</h3>
+          <li class="goods-item">
             <a class="goods-item__link" href="#" target="blank">
-              <picture>
-                <source type="image/webp" media="(max-width: 1024px)"
-                  srcset="img/content/tablet-1.webp 1x, img/content/tablet-1@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 768px)"
-                  srcset="img/content/mobile-1.webp 1x, img/content/mobile-1@2x.webp 2x">
-                <source type="image/webp" srcset="img/content/desktop-1.webp 1x, img/content/desktop-1@2x.webp 2x">
+              <h3>Дорожный велосипед</h3>
+              <div class="goods-item__image goods-item__image--first">
+                <picture>
+                  <source type="image/webp" media="(max-width: 1023px)"
+                    srcset="img/content/tablet-1.webp 1x, img/content/tablet-1@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 768px)"
+                    srcset="img/content/mobile-1.webp 1x, img/content/mobile-1@2x.webp 2x">
+                  <source type="image/webp" srcset="img/content/desktop-1.webp 1x, img/content/desktop-1@2x.webp 2x">
 
 
-                <!-- 1х: 270px; 2x: 540px -->
-                <source media="(max-width: 1024px)"
-                  srcset="img/content/tablet-1.jpg 1x, img/content/tablet-1@2x.jpg 2x">
-                <source media="(max-width: 768px)" srcset="img/content/mobile-1.jpg 1x, img/content/mobile-1@2x.jpg 2x">
-                <!-- 1х: 324px; 2x: 684px -->
-                <img loading="lazy" src="img/content/desktop-1.jpg" srcset="img/content/desktop-1@2x.jpg 2x"
-                  alt="Городской велосипед" width="342" height="503">
-              </picture>
-
+                  <!-- 1х: 270px; 2x: 540px -->
+                  <source media="(max-width: 1023px)"
+                    srcset="img/content/tablet-1.jpg 1x, img/content/tablet-1@2x.jpg 2x">
+                  <source media="(max-width: 768px)"
+                    srcset="img/content/mobile-1.jpg 1x, img/content/mobile-1@2x.jpg 2x">
+                  <!-- 1х: 324px; 2x: 684px -->
+                  <img loading="lazy" src="img/content/desktop-1.jpg" srcset="img/content/desktop-1@2x.jpg 2x"
+                    alt="Городской велосипед" width="342" height="503">
+                </picture>
+              </div>
             </a>
           </li>
           <li class="goods-item goods-item--second">
-            <h3>Горный велосипед</h3>
+
             <a class="goods-item__link" href="#" target="blank">
-              <picture>
-                <source type="image/webp" media="(max-width: 1024px)"
-                  srcset="img/content/tablet-2.webp 1x, img/content/tablet-2@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 768px)"
-                  srcset="img/content/mobile-2.webp 1x, img/content/mobile-2@2x.webp 2x">
-                <source type="image/webp" srcset="img/content/desktop-2.webp 1x, img/content/desktop-2@2x.webp 2x">
+              <h3>Горный велосипед</h3>
+              <div class="goods-item__image goods-item__image--second">
+                <picture>
+                  <source type="image/webp" media="(max-width: 1023px)"
+                    srcset="img/content/tablet-2.webp 1x, img/content/tablet-2@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 768px)"
+                    srcset="img/content/mobile-2.webp 1x, img/content/mobile-2@2x.webp 2x">
+                  <source type="image/webp" srcset="img/content/desktop-2.webp 1x, img/content/desktop-2@2x.webp 2x">
 
-                <!-- 1х: 270px; 2x: 540px -->
-                <source media="(max-width: 1024px)"
-                  srcset="img/content/tablet-2.jpg 1x, img/content/tablet-2@2x.jpg 2x">
-                <source media="(max-width: 768px)" srcset="img/content/mobile-2.jpg 1x, img/content/mobile-2@2x.jpg 2x">
-                <!-- 1х: 324px; 2x: 684px -->
-                <img loading="lazy" src="img/content/desktop-2.jpg" srcset="img/content/desktop-2@2x.jpg 2x"
-                  alt="Горный велосипед" width="342" height="566">
-              </picture>
-
+                  <!-- 1х: 270px; 2x: 540px -->
+                  <source media="(max-width: 1023px)"
+                    srcset="img/content/tablet-2.jpg 1x, img/content/tablet-2@2x.jpg 2x">
+                  <source media="(max-width: 768px)"
+                    srcset="img/content/mobile-2.jpg 1x, img/content/mobile-2@2x.jpg 2x">
+                  <!-- 1х: 324px; 2x: 684px -->
+                  <img loading="lazy" src="img/content/desktop-2.jpg" srcset="img/content/desktop-2@2x.jpg 2x"
+                    alt="Горный велосипед" width="342" height="566">
+                </picture>
+              </div>
             </a>
           </li>
-          <li class="goods-item goods-item--third">
-            <h3>Детский велосипед</h3>
+          <li class="goods-item">
+
             <a class="goods-item__link" href="#" target="blank">
-              <picture>
-                <source type="image/webp" media="(max-width: 1024px)"
-                  srcset="img/content/tablet-3.webp 1x, img/content/tablet-3@2x.webp 2x">
-                <source type="image/webp" media="(max-width: 768px)"
-                  srcset="img/content/mobile-3.webp 1x, img/content/mobile-3@2x.webp 2x">
-                <source type="image/webp" srcset="img/content/desktop-3.webp 1x, img/content/desktop-3@2x.webp 2x">
+              <h3>Детский велосипед</h3>
+              <div class="goods-item__image goods-item__image--third">
+                <picture>
+                  <source type="image/webp" media="(max-width: 1023px)"
+                    srcset="img/content/tablet-3.webp 1x, img/content/tablet-3@2x.webp 2x">
+                  <source type="image/webp" media="(max-width: 768px)"
+                    srcset="img/content/mobile-3.webp 1x, img/content/mobile-3@2x.webp 2x">
+                  <source type="image/webp" srcset="img/content/desktop-3.webp 1x, img/content/desktop-3@2x.webp 2x">
 
-                <!-- 1х: 270px; 2x: 540px -->
-                <source media="(max-width: 1024px)"
-                  srcset="img/content/tablet-3.jpg 1x, img/content/tablet-3@2x.jpg 2x">
-                <source media="(max-width: 768px)" srcset="img/content/mobile-3.jpg 1x, img/content/mobile-3@2x.jpg 2x">
-                <!-- 1х: 324px; 2x: 684px -->
-                <img loading="lazy" src="img/content/desktop-3.jpg" srcset="img/content/desktop-3@2x.jpg 2x"
-                  alt="Детский велосипед" width="342" height="503">
-              </picture>
-
+                  <!-- 1х: 270px; 2x: 540px -->
+                  <source media="(max-width: 1023px)"
+                    srcset="img/content/tablet-3.jpg 1x, img/content/tablet-3@2x.jpg 2x">
+                  <source media="(max-width: 768px)"
+                    srcset="img/content/mobile-3.jpg 1x, img/content/mobile-3@2x.jpg 2x">
+                  <!-- 1х: 324px; 2x: 684px -->
+                  <img loading="lazy" src="img/content/desktop-3.jpg" srcset="img/content/desktop-3@2x.jpg 2x"
+                    alt="Детский велосипед" width="342" height="503">
+                </picture>
+              </div>
             </a>
           </li>
         </ul>
@@ -192,15 +233,16 @@
         <ul class="footer-contacts__list">
           <li class="footer-contacts__item">
 
-            <a class="footer-contacts__link" href="mailto:puteshestviemechta@gmail.ru" aria-label="Электронная почта">
+            <a class="footer-contacts__link footer-contacts__link--email" href="mailto:puteshestviemechta@gmail.ru"
+              aria-label="Электронная почта">
               <svg width="26" height="20">
                 <use xlink:href="img/sprite/sprite.svg#mail"></use>
               </svg>puteshestviemechta@gmail.ru</a>
           </li>
           <li class="footer-contacts__item">
 
-            <a class="footer-contacts__link" href="tel:749978468446" aria-label="Телефон магазина Moon"><svg width="22"
-                height="24">
+            <a class="footer-contacts__link footer-contacts__link--phone" href="tel:749978468446"
+              aria-label="Телефон магазина Moon"><svg width="22" height="24">
                 <use xlink:href="img/sprite/sprite.svg#phone"></use>
               </svg>
               +7 (499)-784-684-46</a>
