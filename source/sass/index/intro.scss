@@ -81,7 +81,8 @@
 }
 
 .intro-form button {
-  padding: 15px 53px 13px 52px;
+  width: 100%;
+  padding: 15px 0 13px 0;
 
   background: $aqua;
   color: $black;
@@ -113,7 +114,7 @@
     align-items: center;
     text-align: center;
     margin: 0 0 71px 0;
-    padding: 136px calc(50% - 340px) 0 calc(50% - 340px);
+    padding: 136px calc(50% - 400px) 0 calc(50% - 400px);
   }
 
   // intro-wrapper--open \ Класс для главного блока -  когда открыто Меню.
@@ -144,10 +145,11 @@
   }
 
   .intro-form {
-    max-width: 321px;
+    max-width: 100%;
   }
 
   .intro-form p {
+    padding: 0 calc(50% - 163px);
     font-weight: 600;
     font-size: 18px;
     line-height: 28px;
@@ -155,22 +157,28 @@
     margin-bottom: 29px;
   }
 
+  .intro-form__item {
+    margin-bottom: 20px;
+  }
+
   .intro-form__item input {
     padding: 12px 0 10px 20px;
   }
 
   .intro-form__list {
-    margin-bottom: 21px;
+    margin-bottom: 19px;
   }
 
   .intro-form button {
-    padding: 18px 50px 13px 52px;
+    width: 100%;
+    padding: 16px 0 13px 0;
   }
 }
 
 @media (max-width: $mobile-width) {
   .intro {
-    padding: 120px calc(50% - 340px) 0 calc(50% - 340px);
+    padding: 120px calc(50% - 400px) 0 calc(50% - 400px);
+    margin: 0 0 50px 0;
   }
 
   .intro-wrapper {
@@ -178,20 +186,25 @@
     margin-bottom: 142px;
   }
 
+  .intro-form__list {
+    margin-bottom: -2px;
+  }
+
   .intro-form {
-    padding: 0 17px;
+    max-width: 100%;
+    padding: 0 5%;
   }
 
   .intro-form p {
+    padding: 0 calc(50% - 159px);
     margin-bottom: 19px;
   }
 
   .intro-form__item input {
-    padding: 12px 0 10px 25px;
+    padding: 13px 0 10px 25px;
   }
 
   .intro-form button {
-    width: 100%;
     padding: 14px 0 14px 0;
   }
 }

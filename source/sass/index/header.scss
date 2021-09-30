@@ -1,13 +1,12 @@
 .header {
   position: relative;
-  padding: 0 calc(50% - 440px);
-  margin-bottom: 391px;
+  padding: 0 calc(50% - 440px) 240px calc(50% - 440px);
 
   &::after {
     position: absolute;
     content: "";
     width: 100%;
-    min-height: 825px;
+    min-height: 100%;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -30,7 +29,7 @@
 
 .header-nav__logo {
   position: absolute;
-  bottom: 235px;
+  top: 320px;
 }
 
 .header-nav__list {
@@ -157,7 +156,6 @@
 
   .header-nav__logo {
     top: 25px;
-    bottom: 0;
     left: 22px;
   }
 

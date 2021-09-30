@@ -22,10 +22,13 @@
 }
 
 .goods-item__link {
-  display: flex;
+  cursor: pointer;
+  padding: 0 0 40px 0;
+}
 
+.goods-item {
+  display: flex;
   flex-direction: column;
-  row-gap: 20px;
   cursor: pointer;
 
   &:hover {
@@ -115,6 +118,7 @@
   line-height: 34px;
   letter-spacing: -0.5px;
   color: $black;
+  margin: -20px 0 0 0;
 }
 
 .goods-item img {
@@ -125,8 +129,8 @@
 
 @media (max-width: $tablet-width) {
   .goods {
-    padding: 48px calc(50% - 400px) 50px calc(50% - 400px);
-    margin-bottom: 72px;
+    padding: 48px calc(50% - 400px) 70px calc(50% - 400px);
+    margin-bottom: 0;
   }
 
   .goods-list {
@@ -135,18 +139,13 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    row-gap: 105px;
+    row-gap: 51px;
   }
 
   .goods h2 {
     font-size: 24px;
     line-height: 41px;
     margin-bottom: 30px;
-  }
-
-  .goods-item__link {
-    max-width: 270px;
-    height: 300px;
   }
 
   .goods-item__image {
@@ -201,11 +200,11 @@
 
 @media (max-width: $mobile-width) {
   .goods {
-    padding: 49px 0 37px 0;
+    padding: 49px 0 54px 0;
   }
 
   .goods-list {
-    row-gap: 95px;
+    row-gap: 42px;
     padding: 0;
   }
 

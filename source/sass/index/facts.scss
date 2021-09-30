@@ -1,5 +1,5 @@
 .facts {
-  padding: 0 calc(50vw - 583px);
+  padding: 150px calc(50vw - 583px) 0 calc(50vw - 583px);
   text-align: center;
   margin-bottom: 152px;
 }
@@ -78,21 +78,21 @@
 
 @media (max-width: $mobile-width) {
   .facts {
-    padding: 0 calc(50% - 145px);
-    margin-bottom: 79px;
+    padding: 19px calc(50% - 145px) 0 calc(50% - 145px);
+    margin-bottom: 81px;
   }
 
   .facts h2 {
     font-weight: 600;
     font-size: 24px;
     line-height: 45px;
-    margin-bottom: 76px;
+    margin-bottom: 77px;
   }
 
   .facts-list {
     display: flex;
     flex-direction: column;
-    row-gap: 87px;
+    row-gap: 86px;
   }
 
   .facts-item {
