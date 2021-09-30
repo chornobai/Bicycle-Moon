@@ -159,7 +159,7 @@
     padding: 12px 0 10px 20px;
   }
 
-  .intro-form__list{
+  .intro-form__list {
     margin-bottom: 21px;
   }
 
@@ -169,7 +169,7 @@
 }
 
 @media (max-width: $mobile-width) {
-  .intro{
+  .intro {
     padding: 120px calc(50% - 340px) 0 calc(50% - 340px);
   }
 
@@ -182,10 +182,6 @@
     padding: 0 17px;
   }
 
-  .intro-form form{
-    min-width: 288px;
-  }
-
   .intro-form p {
     margin-bottom: 19px;
   }
@@ -196,6 +192,6 @@
 
   .intro-form button {
     width: 100%;
-    padding: 15px 0 14px 0;
+    padding: 14px 0 14px 0;
   }
 }

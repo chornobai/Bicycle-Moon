@@ -25,7 +25,7 @@ menuLinks.forEach((item) => {
       behavior: 'smooth',
       block: 'start',
     });
-    body.classList.toggle('body--overflow');
+    body.classList.remove('body--overflow');
   });
 });
 

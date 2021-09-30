@@ -114,13 +114,15 @@ video {
 
 @media (max-width: $mobile-width) {
   .video {
-    padding: 84px calc(50% - 143px) 0 calc(50% - 143px);
+    padding: 84px calc(16px + (133 - 16) * ((100vw - 320px) / (767 - 320))) 0;
     background: linear-gradient(-180deg, $dark 89%, rgba(255, 255, 255, 1) 60%);
     margin-bottom: 70px;
   }
 
   .video-item {
-    height: 161px;
+    margin: 0 auto;
+    width: calc(288px + (503 - 288) * ((100vw - 320px) / (767 - 320)));
+    height: calc(161px + (282 - 161) * ((100vw - 320px) / (767 - 320)));
     background: $black url("../img/backgrounds/video-mobile.jpg") center no-repeat;
     background-size: cover;
 
@@ -143,6 +145,7 @@ video {
     width: 65px;
     height: 65px;
     top: 30.5%;
-    left: 38.5%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
