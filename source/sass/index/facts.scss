@@ -79,7 +79,7 @@
 @media (max-width: $mobile-width) {
   .facts {
     padding: 19px calc(50% - 145px) 0 calc(50% - 145px);
-    margin-bottom: 81px;
+    margin-bottom: 79px;
   }
 
   .facts h2 {
@@ -90,9 +90,7 @@
   }
 
   .facts-list {
-    display: flex;
-    flex-direction: column;
-    row-gap: 86px;
+    grid-row-gap: 87px;
   }
 
   .facts-item {
