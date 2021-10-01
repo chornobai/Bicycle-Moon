@@ -26,4 +26,3 @@ menuLinks.forEach((item) => {
     body.classList.remove('body--overflow');
   });
 });
-
