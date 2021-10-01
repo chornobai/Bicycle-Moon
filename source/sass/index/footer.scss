@@ -60,18 +60,25 @@ iframe {
   flex-direction: row;
 
   justify-content: space-between;
-  column-gap: 94px;
+  margin: 0 -47px 0 -47px;
+}
+
+.footer-contacts__item {
+  margin: 0 47px 0 47px;
 }
 
 .footer-contacts__link {
-  display: inline-flex;
-
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   font-weight: 400;
   font-size: 16px;
   line-height: 22px;
-  align-items: center;
   color: $gray-transparent;
-  column-gap: 15px;
+
+  svg {
+    margin-right: 15px;
+  }
 
   &:hover {
     color: $aqua;
@@ -155,18 +162,20 @@ iframe {
   .footer-contacts__list {
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: baseline;
+    margin: 0;
   }
 
   .footer-contacts__item {
-    margin-bottom: 15px;
+    margin: 0 0 24px 0;
   }
 
   .footer-contacts__link {
-    column-gap: 12px;
-
-    &--phone {
-      margin-left: -20px;
+    svg {
+      margin-right: 13px;
+    }
+    &--phone{
+      margin-right: 21px;
     }
   }
 }

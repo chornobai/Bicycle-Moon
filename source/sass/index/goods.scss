@@ -139,8 +139,16 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    grid-row-gap: 51px;
-    grid-column-gap: 50px;
+    grid-column-gap: 0;
+    margin: 0 -25px 0 -25px;
+  }
+
+  .goods-item {
+    margin: 0 25px 51px 25px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   .goods h2 {
@@ -205,8 +213,12 @@
   }
 
   .goods-list {
-    row-gap: 42px;
+    margin: 0;
     padding: 0;
+  }
+
+  .goods-item {
+    margin: 0 0 43px 0;
   }
 
   .goods-item__image {
