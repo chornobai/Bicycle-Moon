@@ -35,26 +35,21 @@
 .header-nav__list {
   @include reset;
   width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: space-between;
 
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
   padding: 21px 25px 9px 22px;
   border-bottom: 1px solid $pale-white;
 }
 
 .header-nav__item {
   @include reset;
-  margin-right: 135px;
-
-  &:last-child {
-    margin-right: 0;
-  }
 }
 
 .header-nav__link {
   display: block;
+  white-space: nowrap;
   font-size: 16px;
   font-weight: 300;
   color: $white;
@@ -167,6 +162,7 @@
     flex-wrap: nowrap;
     background: $white;
     padding: 100px 0 138px 0;
+    overflow-y: scroll;
   }
 
   .header-nav__item {
